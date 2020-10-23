@@ -3,10 +3,10 @@ import { GlobalContext } from "../context/GlobalContext";
 
 const NewTransaction = () => {
   const { addTransaction } = useContext(GlobalContext);
-
+  let amount: number | string = "";
   // Local Context
   const [title, setTitle] = useState("");
-  const [amount, setAmount] = useState(0);
+  // const [amount, setAmount] = useState(0);
 
   // Create transaction on form submit
   const onSubmit = (e: { preventDefault: () => void }) => {
@@ -44,10 +44,7 @@ const NewTransaction = () => {
           </label>
           <input
             type="number"
-            value={amount}
-            onChange={(e) => {
-              setAmount(Number(e.target.value));
-            }}
+            ref={node => amount = Number(node?.value)}
             placeholder="Enter amount..."
           />
         </div>
