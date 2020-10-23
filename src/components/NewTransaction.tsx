@@ -5,7 +5,7 @@ const NewTransaction = () => {
   const { addTransaction } = useContext(GlobalContext);
   let amount: number | string = "";
   // Local Context
-  const [title, setTitle] = useState("");
+  const [title, setTitle] = useState<string>("");
   // const [amount, setAmount] = useState(0);
 
   // Create transaction on form submit

@@ -4,8 +4,8 @@ import { TransactionType } from "../Types";
 
 const startingState = {
   transactions: [{ id: 1, title: "Salary", amount: 90000 }],
-  deleteTransaction: (id: number) => {},
-  addTransaction: (transaction: TransactionType) => {},
+  deleteTransaction: (id: number) => { },
+  addTransaction: (transaction: TransactionType) => { },
 };
 
 export const GlobalContext = createContext(startingState);
